@@ -1,0 +1,28 @@
+
+As a source package (this is what you want)
+===========================================
+
+   pip install -e <path>
+
+
+From PyPI
+==========
+
+   pip install fixedrec
+
+
+
+To upload to PyPI
+--------------------
+
+ - only source distribution
+
+      python setup.py sdist upload
+
+ - source and windows installer
+
+      python setup.py sdist bdist_wininst upload
+
+ - source, windows, and wheel installer
+
+      python setup.py sdist bdist_wininst bdist_wheel upload
