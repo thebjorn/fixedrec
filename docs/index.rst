@@ -3,44 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to fixedrec's documentation!
-=================================
 
-Installation::
+.. include:: ../README.rst
 
-    pip install -e <path-to-fixedrec-folder-containing-setup.py>
-
-or simply (if your in the project folder):
-
-    pip install -e .
-
-
-Running tests
-------------------------------------------------------------
-One of:
-
-    python setup.py test
-    py.test fixedrec
-    python runtests.py
-
-with coverage (one of):
-
-    py.test --cov=.
-    python runtests.py --cov=.
-    coverage run runtests.py && coverage report
+.. include:: ../DEVELOP.rst
 
 
 
-Building documentation
-------------------------------------------------------------
+..
+  Contents:
+  .. toctree::
+     :maxdepth: 2
 
-    python setup.py build_sphinx
 
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
+API documentation
+=================
 
 
 RecordFile
@@ -51,6 +28,38 @@ RecordFile
    :undoc-members:
 
 
+Layout
+-----------------------------------------------------------
+
+.. automodule:: fixedrec.layout
+   :members:
+   :undoc-members:
+
+
+Record
+-----------------------------------------------------------
+
+.. automodule:: fixedrec.record
+   :members:
+   :undoc-members:
+
+.. automodule:: fixedrec.rectypes
+   :members:
+   :undoc-members:
+
+
+
+Utility functions
+-----------------------------------------------------------
+
+.. automodule:: fixedrec.utils
+   :members:
+   :undoc-members:
+
+
+.. automodule:: fixedrec.bsd_checksum
+   :members:
+   :undoc-members:
 
 
 Indices and tables

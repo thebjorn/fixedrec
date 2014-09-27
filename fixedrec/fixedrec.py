@@ -30,7 +30,7 @@ class RecordFile(object):
 
         self.fp = self.open(self.fname, overwrite)
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return '\n'.join(list(self))
 
     def __str__(self):
@@ -162,8 +162,12 @@ class RecordFile(object):
     def create_new_file(self, fname):
         """Create a new keystore file (overwriting/deleting any existing file.
 
-            :param fname:   string
-            :return:        file pointer
+           Args:
+              fname (str):   Filename to use.
+
+           Returns:
+              (file):        The created file.
+              
         """
         return open(fname, 'w+b')
 

@@ -1,28 +1,28 @@
 
-As a source package (this is what you want)
-===========================================
-
-   pip install -e <path>
-
-
-From PyPI
-==========
-
-   pip install fixedrec
+====================
+Installing fixedrec
+====================
 
 
 
-To upload to PyPI
---------------------
+Developing fixedrec
+-------------------
 
- - only source distribution
+.. note:: if you're using this as a template for new projects, remember to
+          `python setup.py register <projectname>` before you upload to 
+ 	  PyPi.
+
+Uploading to PyPI
+~~~~~~~~~~~~~~~~~
+
+- only source distribution
 
       python setup.py sdist upload
 
- - source and windows installer
+- source and windows installer
 
       python setup.py sdist bdist_wininst upload
 
- - source, windows, and wheel installer
+- source, windows, and wheel installer
 
       python setup.py sdist bdist_wininst bdist_wheel upload

@@ -39,7 +39,9 @@ def test_repr(tmpdir):
     name = fname(tmpdir)
     fp = RecordFile(name, blocksize=4, overwrite=True)
     fp[-1] = 'aaaa'
-    assert repr(fp) == 'aaaa'
+    fp[-1] = 'bbbb'
+    assert repr(fp) == 'aaaa\nbbbb'
+    assert str(fp) == 'aaaabbbb'
 
 
 def test_truncate(tmpdir):
@@ -135,14 +137,14 @@ def test_err_no_filename():
     assert e.value.message == 'Missing file name.'
 
 
-@pytest.mark.skipif("1")
-def test_speed():  # pragma: no cover
+@pytest.mark.skipif("1")   # skip if running coverage..?
+def test_speed(tmpdir):  # pragma: no cover
+    name = fname(tmpdir)
     start = time.time()
-    fname = DATADIR + 'test_speed'
     blocksize = 250
     records = 500
     randpos = [random.randrange(0, records) for _i in range(100000)]
-    bf = RecordFile(fname, blocksize=blocksize)
+    bf = RecordFile(name, blocksize=blocksize)
     data = []
     for i in range(blocksize * records):
         data.append(random.choice(string.letters))
@@ -162,7 +164,7 @@ def test_speed():  # pragma: no cover
         bf[p] = data[n * blocksize:(n + 1) * blocksize]
     writet = time.time()
     write_step = writet - filled
-    assert write_step < 0.07  # 150K+ writes/sec
+    assert write_step < 0.08  # 125K writes/sec
 
     for i, p in enumerate(randpos):
         v = bf[p]
