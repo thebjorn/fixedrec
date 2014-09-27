@@ -45,6 +45,6 @@ setup(
     classifiers=[line for line in classifiers.split('\n') if line],
     long_description=open('README.rst').read(),
     cmdclass={'test': PyTest},
-    packages=setuptools.find_packages(exclude=['tests*']),
+    packages=['fixedrec'],
     zip_safe=False,
 )
