@@ -1,4 +1,8 @@
 
+.. image:: https://travis-ci.org/thebjorn/fixedrec.svg?branch=master
+    :target: https://travis-ci.org/thebjorn/fixedrec
+
+
 fixedrec -- fixed size record IO
 ==================================================
 
