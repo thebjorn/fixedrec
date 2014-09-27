@@ -37,7 +37,7 @@ class PyTest(Command):
 
 
 setup(
-    name='recordio',
+    name='fixedrec',
     version=version,
     requires=[],
     install_requires=[],
