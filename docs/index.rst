@@ -43,6 +43,14 @@ Contents:
    :maxdepth: 2
 
 
+RecordFile
+------------------------------------------------------------
+
+.. automodule:: fixedrec.fixedrec
+   :members:
+   :undoc-members:
+
+
 
 
 Indices and tables

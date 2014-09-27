@@ -59,6 +59,7 @@ class RecordFile(object):
             self.fp.seek(n * self.blocksize, 0)
 
     def truncate(self, recnum=None):
+        "Truncate the file at `recnum` (ie. `recnum` will be gone)."
         if recnum is not None:
             self.goto_recnum(recnum)
         self.fp.truncate()
@@ -69,6 +70,7 @@ class RecordFile(object):
         self.fp.seek(n * self.blocksize, 1)
 
     def goto_first_record(self):
+        "Go to start of first record."
         self.fp.seek(0, 0)
 
     def goto_last_record(self):
@@ -97,6 +99,7 @@ class RecordFile(object):
 
     @property
     def curpos(self):
+        "Return the current position."
         return self.fp.tell() / self.blocksize
 
     def __iter__(self):
@@ -105,23 +108,26 @@ class RecordFile(object):
         self.goto_first_record()
         while self.fp.tell() < eof:
             data = self.read()
-            #print "READ: %r" % data
             yield data
 
     def __len__(self):
+        "Returns the number of records in the file."
         return self.count()
 
     def __getitem__(self, n):
+        "Get record number `n`."
         self.goto_recnum(n)
         return self.read()
 
     def __setitem__(self, n, data):
+        "Set record number `n`."
         self.goto_recnum(n)
         data = data if isinstance(data, list) else [data]
         for rec in data:
             self.write(rec)
 
     def swap(self, a, b):
+        "Swap records at positions `a` and `b`."
         self[a], self[b] = self[b], self[a]
 
     def __delitem__(self, n):
@@ -132,13 +138,15 @@ class RecordFile(object):
         self.truncate(length)
 
     def open(self, fname, overwrite):
+        "Open or create the file."
         if overwrite:
             fp = self.create_new_file(fname)
         else:
             try:
                 fp = self.open_existing_file(fname)
             except IOError as e:
-                if not (e.errno == 2 and e.strerror == 'No such file or directory'):
+                if not (e.errno == 2 and
+                        e.strerror == 'No such file or directory'):
                     raise  # pragma: no cover
                 fp = self.create_new_file(fname)
         return fp
