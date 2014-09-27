@@ -1,0 +1,86 @@
+{
+    "fixedrec/__init__.py": {
+        "6718955d": {
+            "score": 5.0, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 0.0, 
+                "pylint": 5.0, 
+                "size": 0.0
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/bsd_checksum.py": {
+        "176ddf23": {
+            "score": -4.9433, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 43.0, 
+                "pylint": 9.09, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/fixedrec.py": {
+        "96c9adf8": {
+            "score": 9.9, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 0.0, 
+                "pylint": 9.6, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/layout.py": {
+        "b88ca455": {
+            "score": 9.6067, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 1.0, 
+                "pylint": 9.64, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/record.py": {
+        "75f0ad71": {
+            "score": 9.74, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 0.0, 
+                "pylint": 9.44, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/rectypes.py": {
+        "d6a4b14e": {
+            "score": 9.19, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 0.0, 
+                "pylint": 8.89, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }, 
+    "fixedrec/utils.py": {
+        "224706b1": {
+            "score": 9.4867, 
+            "subscores": {
+                "doc": 0, 
+                "pep8": 1.0, 
+                "pylint": 9.52, 
+                "size": 0.3
+            }, 
+            "tstamp": "2014-09-27T19:08:30.170000"
+        }
+    }
+}

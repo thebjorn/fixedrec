@@ -12,15 +12,19 @@ Uploading to PyPI
 
 - only source distribution::
 
-      python setup.py sdist upload
+    python setup.py sdist upload
 
 - source and windows installer::
 
-      python setup.py sdist bdist_wininst upload
+    python setup.py sdist bdist_wininst upload
 
 - source, windows, and wheel installer::
 
-      python setup.py sdist bdist_wininst bdist_wheel upload
+    python setup.py sdist bdist_wininst bdist_wheel upload
+
+- create a documentation bundle to upload to PyPi::
+
+    cd build/sphinx/html && zip -r ../../../pypi-docs.zip *
 
 
 Running tests
