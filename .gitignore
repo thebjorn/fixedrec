@@ -54,3 +54,4 @@ docs/_build/
 target/
 *.py~
 *.rst~
+pypi-docs.zip
